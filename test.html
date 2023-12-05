@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            border: 2px solid;
+            margin: auto;
+            height: 400px;
+            width: 400px;
+            background-color: rgb(255, 255, 255);
+        }
+        .container h2{
+            border-bottom: 2px solid;
+            width: 80%;
+        }
+        #div1 #flip{
+            text-align: center;
+            background-color: red;
+            border: 2px solid;
+        }
+        #div1 #pannel{
+            text-align: center;
+           height: 50px;
+           width: 100%;
+           background-color: yellow;
+           display: none;
+        }
+        #div3 #flip3{
+            text-align: center;
+            background-color: red;
+            border: 2px solid;
+        }
+        #div3 #pannel3{
+            text-align: center;
+           height: 50px;
+           width: 100%;
+           background-color: yellow;
+           display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>B.P.S.C COURSE SYLLABUS</h5>
+        <div id="div1">
+            <div id="flip">click</div>
+            <div id="pannel">hello world</div>
+        </div>
+        <div id="div2">
+            <div id="flip"></div>
+            <div id="pannel"></div>
+        </div>
+        <div id="div3">
+            <div id="flip3">click</div>
+            <div id="pannel3">hello world</div>
+        </div>
+        <div id="div4">
+            <div id="flip"></div>
+            <div id="pannel"></div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#flip").click(function(){
+        $("#pannel").slideToggle(1000);
+        });  
+             $("#flip3").click(function(){
+        $("#pannel3").slideToggle(1000);
+        }); 
+        });
+    </script>
+</body>
+</html>

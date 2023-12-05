@@ -1,0 +1,898 @@
+    ***********BANNER**********
+
+#banner{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),#159f9766),url('image/pexels-felix-mittermeier-956981.jpg');
+    /* background-position: top center; */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: relative;
+    overflow: hidden;
+}
+.navbar-brand img{
+    width: 125px;
+    margin-left: 100px;
+    margin-top: 20px;
+}
+#banner .nav-item .nav-link a{
+    text-decoration: none;
+    font-family: 'Playpen Sans', cursive;
+    color: whitesmoke;
+    /* border: 1.5px solid #2974c5; */
+    border-radius: 15px;
+    padding: 6px 9px 6px 9px;
+    position: relative;
+    font-size: 20px;
+}
+.nav-item .nav-link a::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 1px;
+    width: 100%;
+    height: 3px;
+    background: red;
+    border-radius: 5px;
+    transform: scale(0);
+    transition: transform .5s;
+}
+.nav-item .nav-link a:hover::after{
+    transform-origin: left;
+    transform: scale(1);
+}
+#banner .nav-item .nav-link a:hover{
+    color: rgb(122 255 245);
+}
+#banner .dark-mode .dark-md{
+    margin-left: 40px;
+    padding-right: 10px;
+    font-family: 'Playpen Sans', cursive;
+    color: whitesmoke;
+    font-size: 19px;    
+    cursor: pointer;
+}
+#banner .dark-mode button{
+    background: #efefef;
+    height: 30px;
+    width: 60px;
+    border-radius: 20px;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    position: absolute;
+    transition: 0.5s;
+}
+#banner .dark-mode button span{
+    display: block;
+    background: #999;
+    height: 26px;
+    width: 26px;
+    border-radius: 50%;
+    margin-left: -4px;
+    transition: 0.5s;
+}
+#dark-btn.active{
+    background-color: green !important;
+}
+#dark-btn.active span{
+    background-color: rgb(255, 255, 255) !important;
+    margin-left: 24px !important;
+}
+.container-fluid .wave{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(rgb(60 60 60 / 9%),rgb(16 52 137 / 48%)),url('image/wave.png');
+    background-size: 1000px 100px;
+}
+.container-fluid .wave.wave1{
+    animation: animate 30s linear infinite;
+    z-index: 1000;
+    opacity: 1;
+    animation-delay: 0s;
+    bottom: 0;
+}
+.container-fluid .wave.wave2{
+    animation: animate2 15s linear infinite;
+    z-index: 999;
+    opacity: 0.5;
+    animation-delay: -5s;
+    bottom: 10px;
+}
+.container-fluid .wave.wave3{
+    animation: animate3 30s linear infinite;
+    z-index: 998;
+    opacity: 0.2;
+    animation-delay: -2s;
+    bottom: 15;
+}
+.container-fluid .wave.wave4{
+    animation: animate4 5s linear infinite;
+    z-index: 997;
+    opacity: 0.7;
+    animation-delay: -5s;
+    bottom: 20px;
+}
+@keyframes animate{
+    0%{
+        background-position-x:0 ;
+    }
+    100%{
+        background-position-x:1000px ;
+    }
+}
+@keyframes animate2{
+    0%{
+        background-position-x:0 ;
+    }
+    100%{
+        background-position-x:1000px ;
+    }
+}
+@keyframes animate3{
+    0%{
+        background-position-x:0 ;
+    }
+    100%{
+        background-position-x:1000px ;
+    }
+}
+@keyframes animate4{
+    0%{
+        background-position-x:0 ;
+    }
+    100%{
+        background-position-x:1000px ;
+    }
+}
+#banner-image img{
+    width: 570px;
+    height: 66vh;
+}
+#banner .nav-item{
+    display: flex;
+    margin-top: 45px;
+}
+#banner .text{
+    margin-top: 105px;
+}
+#banner-text p{
+    background: linear-gradient(360deg,#fffa00,#ff0000);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 25px;
+    text-transform: uppercase;
+    margin-bottom: 0px;
+    padding-left: 15px;
+    cursor: pointer;
+    font-family: 'Playpen Sans', cursive;
+}
+#banner-text h1{
+    color: transparent;
+    font-size: 110px;
+    text-transform: uppercase;
+    margin-bottom: 0px;
+    padding-left: 10px;
+    font-family: 'Playpen Sans', cursive;
+    -webkit-text-stroke: 0.8px #fff;
+    background: linear-gradient(#ff3c00,#00ff209e),url('image/back.png');
+    -webkit-background-clip: text;
+    background-position: 0 0;
+    cursor: pointer;
+    animation: back 20s linear infinite;
+}
+@keyframes back{
+    100%{
+        background-position: 2000px 0;
+    }
+}
+#js-m{
+    display: none;
+}
+#js-x{
+    display: none;
+}
+    /*--------- MOBLIE-VIEW-SECTION-------- */
+
+@media(max-width:768px){
+    #banner-image{
+        display: none;
+        }
+        #js-x{
+            display: block;
+            float: right;
+            font-size: 35px;
+            margin-right: 20px;
+            margin-top: 12px;
+            padding: 3px 8px 3px 8px;
+        }
+        #js-x:hover{
+            border: none;
+            border-radius: 50%;
+            background-color: rgb(122, 39, 65);
+            color: rgb(255, 255, 255) !important;
+        }
+        #js-m{
+            display: block;
+            float: right;
+            margin-top: -80px;
+            font-size: 30px;
+            padding-right: 5px;
+        }
+        .navbar-brand img{
+            margin-left: 0px;
+        }
+        #banner #ul{
+            background-color: #ff004f;
+            border-radius: 8px;
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 200px;
+            height: 100vh;
+        }
+        #banner #ul .nav-item{
+            display: block !important;
+            padding-top: 12px;
+            padding-left: 0;
+            position: relative;
+        }
+        #banner #ul .nav-item .nav-link{
+        width: 80%;
+        padding: 18px;
+        border-bottom: 3px solid #8c1339;
+        }
+        #banner #ul .dark-mode{
+        position: absolute;
+        top: 55vh;
+        }
+        #banner #ul .dark-mode span{
+            cursor: pointer;
+        }
+        #banner #ul .dark-md{
+            margin-left: 10px;
+        }
+        #banner #ul button{
+            position: absolute;
+        }
+        #banner .text{
+            margin-top: 90px;
+        }
+        #banner-text p{
+            padding-left: 10px;
+            font-size: 20px;
+            line-height: 3;
+        }
+        #banner-text h1{
+            font-size: 52px;
+            padding-left: 0px;
+        }
+        #banner .nav-item .nav-link a:hover {
+            color: rgb(236 241 0);
+        }
+        #banner .nav-item .nav-link .fa-solid{
+            color: rgb(93, 11, 106)!important;
+        }
+}
+
+        /* ***********BANNER********** */
+
+
+        /* **************COURSES-SECTION************* */
+
+#courses h3{
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
+    margin-top: 110px !important;
+    background: linear-gradient(360deg,#001dff,#ff0000);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+#courses .text h4{
+    margin-left: 80px;
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+}
+#courses .text p{
+   color: #4b4848;
+    font-weight: 500;
+    font-family: 'Playpen Sans', cursive;
+    font-size: 14px;
+}
+#courses .text button{
+    margin-left: 20px;
+    /* background-color: rgb(0 199 255); */
+    background: linear-gradient(360deg,#001dff,#ff0000);
+    color: white;
+    border-radius: 10px;
+    border: none;
+    height: 40px;
+    width: 95px;
+    font-family:'Playpen Sans', cursive;
+    position: relative;
+    z-index: 1;
+}
+#courses .text button::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background: linear-gradient(360deg,#001193,#800000);
+    border-radius: 10px;
+    z-index: -1;
+    transition: 0.6s;
+}
+#courses .text button:hover::before{
+    width: 100%;
+}
+#bihar-police-about h5{
+    margin-top: -12px ;
+    font-family: 'Oswald', sans-serif;
+}
+#bihar-police-about p{
+   color: #4b4848;
+    font-weight: 500;
+    font-size: 13.5px;
+    font-family: 'Playpen Sans', cursive;
+}
+#ssc-about h5{
+    margin-top: -12px ;
+    font-family: 'Oswald', sans-serif;
+}
+#ssc-about p{
+   color: #4b4848;
+    font-weight: 500;
+    font-size: 13.5px;
+    font-family: 'Playpen Sans', cursive;
+}
+#bpsc-about p{
+   color: #4b4848;
+    font-weight: 500;
+    font-size: 13.5px;
+    font-family: 'Playpen Sans', cursive;
+}
+#bpsc-about h5{
+    font-family: 'Oswald', sans-serif;
+}
+
+/*--------- MOBLIE-VIEW-SECTION-------- */
+
+@media(max-width:768px){
+    #courses #bpsc img{
+        margin-left: 85px !important;
+    }
+    #courses #bpsc .text h4{
+        margin-left: 53px !important;
+        font-size: 20px;
+    }
+    #courses #bihar-p-teacher img{
+        margin-left: 90px !important;
+        margin-top: 50px;
+    }
+    #courses #bihar-p-teacher h4{
+        font-size: 20px;
+        margin-left: 7px !important;
+    }
+    #courses #ssc img{
+        margin-left: 30px !important;
+    }
+    #courses #ssc #h4{
+        margin-left: 75px !important;
+        font-size: 20px;
+    }
+    #courses #bihar-p img{
+        margin-left: 75px;
+    }
+    #courses #bihar-p #h4{
+        margin-left: 20px !important;
+        font-size: 20px;
+    }
+    #bihar-police-about img{
+        width: 350px;
+    }
+    #bihar-police-about #text{
+        margin-top: 50px;
+    }
+    #bpsc-about img{
+        width: 350px;
+        margin-left: 0px !important;
+    }
+    #bpsc-about {
+        transform: rotateX(165deg);
+    }
+    #bpsc-about #text{
+        transform: rotateX(180deg);
+    }
+    #bpsc-about img{
+        transform: rotateX(180deg);
+    }
+    #ssc-about img{
+        width: 350px;
+    }
+    #ssc-about{
+        margin-top: -60px !important;
+    }
+    
+}
+
+        /* **************COURSES-SECTION************* */        
+
+        /**************** About-us*********************/
+
+#about h3{
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    /* color: #ff004f; */
+    margin-top: 45px !important;
+    background: linear-gradient(360deg,#001dff,#ff0000);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+#about h5{
+    font-family: 'Oswald', sans-serif;
+}
+#about p{
+   color: #4b4848;
+    font-weight: 500;
+    font-size: 13.5px;
+    font-family: 'Playpen Sans', cursive;
+}
+
+    /**************** About-us*********************/
+
+        /* -----------contact-us------------- */
+
+#contact{
+    background-image: url('image/background.jpg');
+    width: 100%;
+    height: 600px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.mb-3{
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    /* color: #ff004f; */
+    margin-top: 110px !important;
+    background: linear-gradient(360deg,#001dff,#ff0000);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+#contact #form{
+    background: transparent;
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid #9d9d9db5;
+    margin-top: 50px;
+    border-radius: 14px;
+    
+}
+#contact #input #form-input{
+    border: 1.5px solid #666768;
+    border-radius: 10px ;
+    background: transparent;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 15px;
+    opacity: .5;
+}
+#contact #input label{
+    font-size: 17px;
+    font-weight: 500;
+    color: #3057d7;
+    font-family:  'Playpen Sans', cursive;
+}
+#contact .message{
+    width: 100%;
+    height: 246px;
+    background-color: transparent !important;
+    backdrop-filter: blur(10px);
+    border: 1px solid #666768;
+    border-radius: 10px ;
+}
+#contact .message label{
+    text-shadow: black -2px 0px 2px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    cursor: text;
+    color: #a3a3a3;
+    font-size: 22px;
+    font-family:  'Playpen Sans', cursive;
+}
+#contact button{
+    border-radius: 8px;
+    height: 34px;
+    width: 79px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    border: 1.5px solid #666768;
+    border-radius: 10px ;
+    background: transparent;
+    position: relative;
+    z-index: 1;
+}
+#contact button a{
+    font-size: 17px;
+    font-weight: 500;
+    color: #002affb0;
+    text-shadow: black -1px 0px 0px;
+    text-decoration: none;
+    font-family:  'Playpen Sans', cursive;
+}
+#contact button::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: rgba(0, 42, 255, 0.708);
+    border-radius: 8px;
+    z-index: -1;
+    transition: 0.5s;
+}
+#contact button:hover::before{
+    width: 100%;
+}
+#contact button:hover a{
+    color: white;
+    transition: 0.3s;
+}
+#contact #text{
+position: relative;
+}
+#contact .text-contant {
+    position: absolute;
+    top: 150px;
+}
+#contact .text-contant p{
+    color: rgb(255 255 255);
+    font-weight: 600;
+    font-size: 20px;
+    text-transform: uppercase;
+    margin-bottom: 0px;
+    padding-left: 20px;
+    cursor: pointer;
+    font-family: 'Playpen Sans', cursive;
+    text-shadow: black 3px 1px 0px;
+}
+#contact .text-contant h1{
+    color: transparent;
+    font-size: 85px;
+    text-transform: uppercase;
+    margin-top: 15px;
+    margin-bottom: 0px;
+    padding-left: 10px;
+    font-family: 'Playpen Sans', cursive;
+    -webkit-text-stroke: 0.8px #fff;
+    background: linear-gradient(#0098ffd1,#ff00008a),url('image/back.png');
+    -webkit-background-clip: text;
+    background-position: 0 0;
+    cursor: pointer;
+    animation: back 20s linear infinite;
+    text-shadow: #210000 1px 9px 20px;
+}
+@keyframes back{
+    100%{
+        background-position: 2000px 0;
+    }
+}
+#quarey{
+    display: none;
+}
+#back{
+    display: none;
+}
+    /*--------- MOBLIE-VIEW-SECTION-------- */
+
+@media(max-width:768px){
+    #contact{
+        height: 620px;
+        background: linear-gradient(rgba(0, 0, 0, 0.479),rgba(0, 0, 0, 0.479)), url('image/background.jpg');
+        /* background-position: center; */
+        background-size: cover;
+        background-attachment: fixed;
+    }
+    #contact #form{
+        background: transparent;
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border: 1px solid #9d9d9db5;
+        margin-top: 20px;
+        margin-left: 20px;
+        border-radius: 14px;
+        width: 90%; 
+        display: none;
+    }
+    #contact #form form{
+        padding-left: 55px;
+    }
+    #contact .mt-4{
+        margin-top: 0 !important;
+        margin-left: -2px;
+    }
+    #contact #form #col{
+     padding: 10px;
+    }
+    #contact #input label{
+        font-size: 17px;
+        font-weight: 500;
+        color: #eeee;
+        font-family: 'Playpen Sans', cursive;
+    }
+    #contact .message{
+        width: 100%;
+        height: 165px;
+    }
+    #contact button a{
+        color: #eeee;
+    }
+    #contact .text-contant p{
+        font-size: 15px;
+    }
+    #contact .text-contant h1{
+        font-size: 45px;
+    }
+    #contact .text-contant #quarey{
+        margin-top: 40px;
+        height: 45px;
+        width: 110px;
+        background-color: #00acea;
+    }
+    #contact .text-contant #quarey a{
+        font-size: 25px;
+        color: white;
+        font-family: 'Playpen Sans', cursive;
+        text-shadow: black -1px 0px 0px;
+    }
+    #contact #back{
+        padding: 3px 8px 3px 8px;
+        float: right;
+        font-size: 40px;
+        margin-top: 10px;
+        text-shadow: black -2px 0px 2px;
+        color:#939393;
+    }
+    #quarey{
+        display: block;
+    }
+    #back{
+        display: block;
+    }
+    #contact #back:hover{
+        border: none;
+        border-radius: 50%;
+        background-color: #4c4c4c;
+        color: white !important;
+    }
+    
+}
+
+     /* -----------contact-us------------- */
+
+        /* ************Carousel-section***********/
+
+#carouselId{
+    width: 65%;
+    height: 300px;
+    position: relative;
+    left: 20%;
+    top: 3px;
+    background-color: #bababa;
+    border-radius: 8px;
+}
+.carousel-control-prev {
+    top: 45%;
+    left: -142px;
+    width: 20% !important;
+    height: 15% !important;
+}
+.carousel-control-prev-icon{
+    background-image: url('image/left-arrow.png');
+}
+.carousel-control-next{
+    top: 45%;
+    right: -90px;
+    width: 10% !important;
+    height: 10% !important;
+}
+.carousel-control-next-icon{
+    background-image: url('image/next.png');
+}
+#carouselId #image{
+    padding: 30px;
+    position: relative;
+}
+#carouselId #image img{
+    border-radius: 8px;
+    width: 40% !important;
+}
+#carouselId #image h6{
+    display: inline;
+    font-family: 'Oswald', sans-serif;
+    font-size: 24px;
+}
+#carouselId #image span{
+    text-transform: uppercase;
+    font-weight: 400;
+    font-family: 'Oswald', sans-serif;
+}
+#carouselId #image p{
+    font-weight: 500;
+    font-size: 13.5px;
+    font-family: 'Playpen Sans', cursive;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+#carouselId .carousel-indicators{
+    top: 65vh;
+}
+
+        /*--------- MOBLIE-VIEW-SECTION-------- */
+
+@media(max-width:768px){
+    #carouselId{
+        display: none;
+    }
+    
+    
+    /* .owl-carousel .item{
+        background-color: #001dff;
+        height: 350px;
+        width: 100%;
+    }
+    .owl-carousel .item #image img {
+        border-radius: 15px !important;
+        float: left;
+        margin-left: 10px;
+        margin-top: 10px;
+    }
+    .owl-carousel .item #text h6{
+        float: left;
+        display: block !important;
+        margin-top: 10px;
+    }
+    .owl-carousel .owl-item span{
+        float: left;
+        margin-left: -40px !important;
+        margin-top: 10px;
+    } */
+}
+
+          /* ************Carousel-section***********/
+
+        /* ----------footer-section------- */
+
+#footer{
+    background-color: rgb(0, 0, 0);
+    margin-top: 40vh;
+    height: 100vh;
+}
+#footer h3{
+    text-align: center;
+    margin-top: 15px;
+    color: white;
+    font-family: 'Oswald', sans-serif;
+}
+#footer .col-md-3{
+    margin-top: 30vh;
+}
+#footer ul{
+    text-decoration: none;
+    list-style: none;
+    padding-left: 0;
+}
+#footer ul li{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-left: 134px;
+}
+#footer ul li a{
+    text-decoration: none;
+    list-style: none;
+    color: white;
+    font-family: 'Playpen Sans', cursive;
+    position: relative;
+}
+#footer ul li a::after{
+    content: '';
+    position: absolute;
+    top: 25px;
+    left: 0;
+    bottom: 1px;
+    width: 100%;
+    height: 3px;
+    background: red;
+    border-radius: 5px;
+    transform: scale(0);
+    transition: transform .5s;
+}
+#footer ul li a:hover::after{
+    transform-origin: left;
+    transform: scale(1);
+}
+#footer ul li a:hover{
+    color: yellow;
+}
+#footer span{
+    padding-top: 15px;
+    color: white;
+    font-family: 'Playpen Sans', cursive;
+    text-decoration: none;
+}
+#footer span:hover{
+    color: rgb(0, 145, 255);
+}
+#footer span a{
+    padding-top: 15px;
+    color: white;
+    font-family: 'Playpen Sans', cursive;
+    text-decoration: none;
+    font-size: 18px;
+}
+#footer span a:hover{
+    color: rgb(255, 200, 0);
+}
+#footer p{
+    color: white;
+    font-family: 'Playpen Sans', cursive;
+}
+#footer .image{
+    width: 70%;
+    margin-top: 20px;
+    margin-left: 60px;
+}
+#footer .image img{
+    margin-left: 20px;
+    padding: 5px;
+}
+#footer .image span{
+    padding-left: 10px;
+}
+#footer .image:hover{
+    border: none;
+    border-radius: 10px;
+    background-color: #3ccbff;
+    transition: 0.7s;
+}
+#footer .image:hover a{
+    color: rgb(255, 200, 0);
+}
+
+        /*--------- MOBLIE-VIEW-SECTION-------- */
+
+@media(max-width:768px){
+    #footer{
+        height: 225vh !important;
+    }
+    #footer .col-md-3 {
+        margin-top: 14vh;
+    }
+    #footer h3{
+        text-align: left !important;
+        margin-left: 25px !important;
+        font-size: 35px;
+    }
+    #footer ul li{
+        margin-left: 40px !important;
+    }
+    #footer ul li a{
+        font-size: 18px !important;
+    }
+    #footer .image {
+        margin-left: 0px !important;
+    }
+}
+
+        /* --------footer-section------- */

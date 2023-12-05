@@ -396,13 +396,13 @@
         font-size: 20px;
     }
     #bihar-police-about img{
-        width: 350px;
+        width: 320px;
     }
     #bihar-police-about #text{
         margin-top: 50px;
     }
     #bpsc-about img{
-        width: 350px;
+        width: 320px;
         margin-left: 0px !important;
     }
     #bpsc-about {
@@ -415,7 +415,7 @@
         transform: rotateX(180deg);
     }
     #ssc-about img{
-        width: 350px;
+        width: 320px;
     }
     #ssc-about{
         margin-top: -60px !important;

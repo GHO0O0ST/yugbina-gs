@@ -12,6 +12,12 @@ js_x.addEventListener('click', function(){
     ul.style. transition = '1s';
 });
 
+// let dark_btn = document.querySelector('#dark-btn');
+
+// dark_btn.addEventListener('click',function(){
+//     body.style.color = "green";
+// });
+
 // let  = document.querySelector('#dark-btn');
 
 // btn.addEventListener('click',function(){
